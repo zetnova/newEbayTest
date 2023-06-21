@@ -1,5 +1,5 @@
-            import { Given, When, Then, And} from "cypress-cucumber-preprocessor/steps";
-            import HomePage from "../page_object/homePage";  
+import { Given,When, Then} from "@badeball/cypress-cucumber-preprocessor";
+import HomePage from "../page_object/homePage";  
 
             let homePage= new HomePage();
 
@@ -26,7 +26,7 @@
                 homePage.getFirstItemFromTheSearchResults().click();
             })
 
-            And("I add the item to the cart", () => {
+            Then("I add the item to the cart", () => {
                 homePage.getFirstItemFromTheSearchResults().click();
             })
 
