@@ -1,0 +1,39 @@
+import HomePage from '../page_object/homePage.js';
+let homePage= new HomePage();
+
+
+class SecondPage{
+
+ 
+
+   
+  switchWindow() {
+    let originalWindow;
+  
+    cy.window().then((win) => {
+      originalWindow = win;
+      return homePage.getFirstItemFromTheSearchResults().invoke('removeAttr', 'target').click({ force: true });
+    }).then(() => {
+      cy.window().should('have.length.gt', 1).then((windows) => {
+        const newWindow = windows[windows.length - 1];
+        cy.wrap(newWindow).should('have.property', 'location').then((newLocation) => {
+          const newUrl = newLocation.href;
+          cy.log("Switched to new tab. New URL: " + newUrl);
+          
+        
+        });
+      });
+    });
+  }
+  
+
+  
+
+      addToCart(){
+        cy.get('#mainContent > form > div.vim-buybox-wrapper > div > div.x-buybox__section > div.x-buybox__cta-section > ul > li:nth-child(2) > div > a').should('be.visible').click({force:true});
+        
+    }
+
+}
+
+export default  SecondPage;       

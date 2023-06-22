@@ -14,13 +14,13 @@ class HomePage{
     }
 
     getAllSearchResultsOnThepage(){
-        cy.get('.s-item.s-item__pl-on-bottom').each(($item) => {
+        cy.get('.s-item__title').each(($item) => {
             cy.log($item.text())
           });
     }
 
     getFirstItemFromTheSearchResults(){
-        return cy.get('.s-item__title').еq(0)
+        return cy.get('.s-item__title').eq(1);
     }
     
 
