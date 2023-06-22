@@ -4,7 +4,6 @@ let homePage= new HomePage();
 
 class SecondPage{
 
- 
 
    
   switchWindow() {
@@ -25,8 +24,6 @@ class SecondPage{
       });
     });
   }
-  
-
   
 
       addToCart(){
