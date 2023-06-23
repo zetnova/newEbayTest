@@ -41,8 +41,3 @@ This project is licensed under the ISC License. See the LICENSE file for details
 
 
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 49891ecd544f1b2565994d4ff32a7bef0b48901b
