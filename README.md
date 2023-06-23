@@ -1,10 +1,12 @@
+
+
 NewEbayTest
 
 Description :
 
 NewEbayTest is a project for automating Cypress tests using Cucumber.
 
-Installation
+Installation:
 Before running the tests, make sure you have the following dependencies installed:
 
 Node.js
@@ -40,6 +42,3 @@ This project is licensed under the ISC License. See the LICENSE file for details
 
 
 
-
-
-Regenerate response
